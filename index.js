@@ -12,6 +12,6 @@ app.use(cors({ origin: "*", methods: ["GET", "POST", "DELETE", "PUT"] }));
 connectDB();
 const userRoute = require("./src/routes/user");
 app.use("/api/user/", userRoute);
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Hello JS");
 });
